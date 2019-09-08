@@ -18,36 +18,30 @@ import {
 
 import {Header, Colors} from 'react-native/Libraries/NewAppScreen';
 
-import TodoApp from './TodoApp';
+import AppNavigator from './configs/StackNavigator';
 
 const App = () => {
-  return (
-    <Fragment>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}>
-          <Header />
-          {global.HermesInternal == null ? null : (
-            <View style={styles.engine}>
-              <Text style={styles.footer}>Engine: Hermes</Text>
-            </View>
-          )}
-          <View style={styles.body}>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Todo List</Text>
-              {/* <Text style={styles.sectionDescription}>
-                Edit <Text style={styles.highlight}>App.js</Text> to change this
-                screen and then come back to see your edits.
-              </Text> */}
-              <TodoApp />
-            </View>
-          </View>
-        </ScrollView>
-      </SafeAreaView>
-    </Fragment>
-  );
+  return <AppNavigator />;
+  // return (
+  //   <Fragment>
+  //     <StatusBar barStyle="dark-content" />
+  //     <SafeAreaView>
+  //       <ScrollView
+  //         contentInsetAdjustmentBehavior="automatic"
+  //         style={styles.scrollView}>
+  //         <Header />
+  //         {global.HermesInternal == null ? null : (
+  //           <View style={styles.engine}>
+  //             <Text style={styles.footer}>Engine: Hermes</Text>
+  //           </View>
+  //         )}
+  //         <View style={styles.body}>
+  //           <AppNavigator />
+  //         </View>
+  //       </ScrollView>
+  //     </SafeAreaView>
+  //   </Fragment>
+  // );
 };
 
 const styles = StyleSheet.create({
